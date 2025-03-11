@@ -1,0 +1,167 @@
+body {
+    background-color:#ffd1c1;
+    padding-top:100px;
+    text-align: center;
+}
+header {
+    position: fixed; /* Stick to the top of the screen */
+    top: 0; /* Align it to the top */
+    left: 0; /* Align it to the left */
+    width: 100%; /* Stretch across the screen width */
+    height: 100px; /* Set the desired header height */
+    background-color:darkslategray; /* Example background color */
+    display: flex; /* Optional: Center content */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    color:#ffd1c1;
+    font-size:250%;
+}
+.labels {
+    color:darkslategray;
+    font-size:200%;
+    bottom: 0;
+    display: inline-block;
+    text-align: center;
+}
+.hr_tag_fit {
+    background-color: darkslategrey;
+    width:100%;
+    margin-top: 0%;
+    margin-bottom: 0%; 
+    height: 2px;
+}
+.text_input{
+    border-radius: 25px;
+    padding: 10px;
+    margin: 10px auto;
+    display: inline-block;
+}
+.task_style {
+    border-radius: 25px;
+    background-color: darkslategray;
+    color:#ffd1c1;
+    padding: 10px;
+    margin: 10px auto;
+    width: 50%;
+}
+ul {
+    padding: 0;
+    margin: 0;
+}
+li {
+    list-style: none;
+    font-family:cursive;
+    text-align: left;
+    padding-left:5px;
+
+}
+/* Style the checkbox */
+input[type="checkbox"] {
+    border-radius: 5px;
+    margin-right: 10px;
+    accent-color: #4CAF50; /* Change the color of the checkbox */
+}
+.completed {
+    text-decoration: line-through;
+}
+button {
+    color:#ffd1c1;
+    background-color: darkslategrey;
+    border-radius: 5px;
+    font-size:15px;
+}
+.section {
+    text-align: center;
+    width: 50%;  
+    float: left;
+}
+#calendar_header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+#prev_month {
+    float: left;
+    font-size:20px;
+}
+#month_year {
+    font-size:20px;
+    background-color:khaki;
+    color:black;
+    border-radius:25px;
+    text-align: center;
+    width: 50%;
+}
+#next_month {
+    float: right;
+    font-size:20px;
+}
+#calendar_container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color:darkslategray;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+#calendar_header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    color:#ffd1c1;
+    font-weight:bold;
+    font-size:20px;
+}
+#days_of_week {
+    display: flex;
+    width: 100%;
+    margin-bottom: 0px;
+}
+#days_of_week div {
+    display: flex;
+    width: calc(100% / 7);
+    margin-bottom: 0px;
+    color:#ffd1c1;
+    font-weight:bold;
+    font-size:15px;
+}
+#calendar_days {
+    display: flex;
+    flex-wrap: wrap;
+}
+#calendar_days div {
+    width: calc(100% / 7);
+    height: 100px;
+    display: flex;
+    align-items: top;
+    justify-content: left;
+    border: 1px solid #ffd1c1;
+    box-sizing: border-box;
+    color:#ffd1c1;
+    font-size:12px;
+    padding-left:2px;
+}
+
+/*Style elipse and make it fit vertically FIXME*/
+#calendar_task {
+    width: 20px; /* Set the width of the ellipse */
+    height: 5px; /* Set the height of the ellipse */
+    background-color: #ffd1c1; /* Set the background color of the ellipse */
+    border-radius: 50%; /* Make it an circle */
+    display: inline-block; /* Ensure it displays inline */
+    margin: 5px; /* Add some margin for spacing */
+    font-size: 0; /* Hide the text */
+    flex-direction: column; /* Align items vertically */
+}
+#calendar_task::after {
+    content: ''; /* Hide the text */
+    width: 20px; /* Set the width of the ellipse */
+    height: 20px; /* Set the height of the ellipse */
+    background-color: #ffd1c1; /* Set the background color of the ellipse */
+    border-radius: 50%; /* Make it a circle */
+    display: inline-block; /* Ensure it displays inline */
+    position: absolute; /* Position absolute for overlay */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+}

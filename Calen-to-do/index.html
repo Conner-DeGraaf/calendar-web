@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+    <head>
+        <title>Calen-to-do</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script> <!--defer tells the html file to wait before applying javascript-->
+    </head>   
+    <header>
+        Calendar App
+    </header>
+    <body>
+        <div id="to_do_section" class = "section">
+            <div id ="to_do_list" class="labels">
+                <p style="margin-bottom: 0%;">To-Do List</p>
+                <hr class="hr_tag_fit">
+            </div>
+
+            <div id="list">
+                <input id="input" type="text" class ="text_input" placeholder="Enter a task">
+                <div id="tasks" class="task_style">
+                    <ul id="task_list"></ul>
+                </div>
+                <button type="button" onclick="clear_tasks()">Clear Completed Tasks</button>
+                <br>
+                <input id="date" type="text" class ="text_input" placeholder="Enter a day">
+                <button type="button" onclick="add_from_todo()">Add to Calendar</button>
+            </div>
+        </div>
+
+        <div id="calendar_section" class = "section">
+            <div id="calendar" class="labels">
+                <p style="margin-bottom: 0%;">Calendar</p>
+                <hr class="hr_tag_fit">
+            </div>
+            <div id="calendar_container">
+                <div id = "calendar_header">
+                    <button id="prev_month">&lt;</button>
+                    <div id="month_year"></div>
+                    <button id="next_month">&gt;</button>
+                </div>
+                <div id="calendar_body">
+                    <div id="days_of_week">
+                        <div>Sun</div>
+                        <div>Mon</div>
+                        <div>Tue</div>
+                        <div>Wed</div>
+                        <div>Thu</div>
+                        <div>Fri</div>
+                        <div>Sat</div>
+                    </div>
+                    <div id="calendar_days"></div>
+                </div> 
+            </div>
+        </div>
+
+    </body>
+</html>
